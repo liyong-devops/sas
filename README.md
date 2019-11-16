@@ -56,7 +56,7 @@ yum install ghostscript ## 可选安装
 
 
 
-### 1.2.开始安装guacamole-server
+### 1.2.安装guacamole-server
 
 ```she
 tar -xzf guacamole-server-1.0.0.tar.gz
@@ -115,6 +115,10 @@ autoreconf -fi
 > [root@bogon guacamole-server-1.0.0]#
 > ```
 
+```shell
+make
+make install
+```
 
 
 ### 1.3.server安装完成
@@ -122,7 +126,7 @@ autoreconf -fi
 ```shell
 ldconfig
 ## 查看guacd服务状态
-/etc/init.d/guacd start
+/etc/init.d/guacd status
 ```
 
 
