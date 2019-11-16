@@ -145,7 +145,7 @@ mv /usr/local/share/jdk1.8.0_162 /usr/local/share/jdk1.8
 
 cat >> /etc/profile <<myEOF
 
-\## java env byLiyong
+## java env byLiyong
 
 export JAVA_HOME=/usr/local/share/jdk1.8
 
