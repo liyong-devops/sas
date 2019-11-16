@@ -1,0 +1,4 @@
+- 界面汉化与修改
+- ldap认证
+- 增加ip地址接口（协议），如直接输入ip-rdp就可远程Windows，输入ip-ssh即可控制Linux
+- 
