@@ -226,12 +226,10 @@ tcp6       0      0 ::1:25                  :::*                    LISTEN      
 ```shell
 mkdir /etc/guacamole
 cd /etc/guacamole
-touch guacamole.properties logback.xml
+touch guacamole.properties logback.xml user-mapping.xml
 mkdir extensions lib
 
 vi user-mapping.xml # 创建简单用户-虚机映射配置文件
-
-
 ```
 
 ！！！ 认真阅读 *http://guacamole.apache.org/doc/gug/index.html* 网站中配置相关信息 ！！！
