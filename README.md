@@ -141,26 +141,16 @@ tar zxf jdk-8u162-linux-x64.tar.gz -C /usr/local/share/
 
 mv /usr/local/share/jdk1.8.0_162 /usr/local/share/jdk1.8
 
-
-
 cat >> /etc/profile <<myEOF
 
 ## java env byLiyong
-
 export JAVA_HOME=/usr/local/share/jdk1.8
-
 export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar
-
 export PATH=\$JAVA_HOME/bin:\$PATH
-
- 
 
 myEOF
 
- 
-
 source /etc/profile
-
 java -version
 ```
 
