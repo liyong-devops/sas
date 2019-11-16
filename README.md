@@ -18,6 +18,7 @@ Apache Guacamole 学习参考地址
 
 
 
+
 # 0.准备工作
 
 - [x] 将yum配置为国内源
@@ -35,6 +36,7 @@ _略_
   $ rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
   ```
 
+  
   
 
 # 1.Guacamole-server安装
@@ -122,6 +124,7 @@ ldconfig
 ## 查看guacd服务状态
 /etc/init.d/guacd start
 ```
+
 
 
 
@@ -220,6 +223,7 @@ tcp6       0      0 ::1:25                  :::*                    LISTEN      
 ### 2.3.看下效果
 
 ![login](img/1.png)
+
 
 
 
