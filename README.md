@@ -326,7 +326,7 @@ sh /opt/restart.sh
 
 # 4.效果展示
 
-![login](img\2.png)
+![login](img/2.png)
 
 ![login](C:\Users\liyong\Desktop\3.png)
 
