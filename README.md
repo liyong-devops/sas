@@ -65,18 +65,19 @@ autoreconf -fi
 
 正常情况下，应输出如下：
 
+> ```she
 > config.status: creating config.h
 > config.status: executing depfiles commands
 > config.status: executing libtool commands
->
+> 
 > ---
->
+> 
 > guacamole-server version 1.0.0
->
+> 
 > ---
->
+> 
 > Library status:
->
+> 
 >   freerdp ............. yes
 >   pango ............... yes
 >   libavcodec .......... yes
@@ -90,26 +91,27 @@ autoreconf -fi
 >   libpulse ............ yes
 >   libwebp ............. yes
 >   wsock32 ............. no
->
+> 
 > Protocol support:
->
+> 
 >    RDP ....... yes
 >    SSH ....... yes
 >    Telnet .... yes
 >    VNC ....... yes
->
+> 
 > Services / tools:
->
+> 
 >    guacd ...... yes
 >    guacenc .... yes
 >    guaclog .... yes
->
+> 
 > Init scripts: /etc/init.d
 > Systemd units: no
->
+> 
 > Type "make" to compile guacamole-server.
->
+> 
 > [root@bogon guacamole-server-1.0.0]#
+> ```
 
 
 
@@ -176,6 +178,7 @@ netstat -ntlp
 
 正常情况下，端口80/8009出现如下：
 
+> ```shell
 > [root@bogon tomcat8]# netstat -ntlp
 > Active Internet connections (only servers)
 > Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
@@ -186,6 +189,7 @@ netstat -ntlp
 > tcp6       0      0 :::22                   :::*                    LISTEN      897/sshd
 > tcp6       0      0 ::1:25                  :::*                    LISTEN      1103/master
 > [root@bogon tomcat8]#
+> ```
 
 启动guacamole-server
 
@@ -208,6 +212,7 @@ tcp6       0      0 :::80                   :::*                    LISTEN      
 tcp6       0      0 :::22                   :::*                    LISTEN      897/sshd
 tcp6       0      0 ::1:25                  :::*                    LISTEN      1103/master
 [root@bogon tomcat8]#
+
 ```
 
 
@@ -227,6 +232,7 @@ touch guacamole.properties logback.xml
 mkdir extensions lib
 
 vi user-mapping.xml # 创建简单用户-虚机映射配置文件
+
 
 ```
 
@@ -265,6 +271,7 @@ vi user-mapping.xml # 创建简单用户-虚机映射配置文件
 > 
 > </user-mapping>
 > [root@bogon guacamole]#
+> 
 > ```
 
 ##### 为方便后续调试，编写重启脚本！
@@ -279,6 +286,7 @@ vi user-mapping.xml # 创建简单用户-虚机映射配置文件
 > sleep 5
 > /opt/tomcat8/bin/startup.sh
 > /etc/init.d/guacd start
+> 
 > ```
 >
 > [root@bogon guacamole]#
@@ -287,13 +295,15 @@ vi user-mapping.xml # 创建简单用户-虚机映射配置文件
 
 ```shell
 sh /opt/restart.sh
+
 ```
 
+> ```shell
 > [root@bogon guacamole]# ps -ef |grep java
 > root      9236  9235  0 16:06 pts/0    00:00:18 /usr/local/share/jdk1.8/bin/java -Djava.util.logging.config.file=/opt/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat8/bin/bootstrap.jar:/opt/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat8 -Dcatalina.home=/opt/tomcat8 -Djava.io.tmpdir=/opt/tomcat8/temp org.apache.catalina.startup.Bootstrap start
 > root     30343  1387  0 17:03 pts/0    00:00:00 grep --color=auto java
 > [root@bogon guacamole]#
->
+> 
 > [root@bogon guacamole]# netstat -ntlp
 > Active Internet connections (only servers)
 > Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
@@ -306,6 +316,8 @@ sh /opt/restart.sh
 > tcp6       0      0 :::22                   :::*                    LISTEN      897/sshd
 > tcp6       0      0 ::1:25                  :::*                    LISTEN      1255/master
 > [root@bogon guacamole]#
+> 
+> ```
 
 *`guacamole.properties是全局配置文件，本处略`*
 *`echo 'available-languages: en, de' >> guacamole.properties`*
