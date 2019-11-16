@@ -219,7 +219,7 @@ tcp6       0      0 ::1:25                  :::*                    LISTEN      
 
 ### 2.3.看下效果
 
-![login](C:\Users\liyong\Desktop\1.png)
+![login](img/1.png)
 
 
 
@@ -327,15 +327,10 @@ sh /opt/restart.sh
 # 4.效果展示
 
 ![login](img/2.png)
-
-![login](C:\Users\liyong\Desktop\3.png)
-
-![login](C:\Users\liyong\Desktop\4.png)
-
-![login](C:\Users\liyong\Desktop\5.png)
-
-![login](C:\Users\liyong\Desktop\6.png)
-
+![login](img/3.png)
+![login](img/4.png)
+![login](img/5.png)
+![login](img/6.png)
 
 
 -End-
