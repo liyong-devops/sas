@@ -1,0 +1,43 @@
+
+// pg server 安装
+## pg
+yum install postgresql-server postgresql-contrib
+# find / -name postgresql
+/usr/libexec/initscripts/legacy-actions/postgresql/initdb
+passwd postgres
+netstat -ntlp
+systemctl status postgresql
+systemctl start postgresql
+systemctl status postgresql
+cd /var/lib/pgsql/data/
+# 远程连接配置
+vi postgresql.conf
+vi pg_hba.conf
+# 登录
+su - postgres
+psql -U postgres
+# 使用
+select version();
+
+
+// 配置
+# PostgreSQL properties
+postgresql-hostname: 10.209.12.162
+postgresql-port: 5432
+postgresql-database: guacamole_db163
+postgresql-username: guacamole_user
+postgresql-password: some_password
+
+#postgresql-user-required: true
+
+
+// 不成功
+ldap-hostname: unisinsight.com
+ldap-port: 389
+ldap-encryption-method: none
+ldap-max-search-results: 1000
+ldap-search-bind-dn: insliyong
+ldap-search-bind-password: Password
+ldap-user-base-dn: OU=信息技术中心,OU=重庆紫光华山智安科技有限公司,DC=unisinsight,DC=com
+ldap-username-attribute: sAMAccountName
+ldap-user-search-filter: (objectClass=*)
